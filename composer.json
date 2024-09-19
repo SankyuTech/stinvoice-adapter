@@ -1,12 +1,12 @@
 {
-  "name": "sankyutech/sankyu-invoice-php",
-  "description": "Sankyu Invoice Client for PHP",
+  "name": "sankyutech/stinvoice-adapter",
+  "description": "ST Invoice SDKfor PHP",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
       "name": "Sankyu Tech Sdn Bhd",
-      "email": "dev@sankyutech.my"
+      "email": "technical.support@sankyutech.com"
     }
   ],
   "autoload": {
