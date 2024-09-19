@@ -4,20 +4,19 @@ namespace Sankyu;
 
 use Sankyu\Contracts\Authenticable;
 
-class BearerAuth implements Authenticable
+class CustomSankyuAuth implements Authenticable
 {
-    /**
-     * @var Client
-     */
-    protected $client;
+    protected ?string $apiKey;
+    protected ?string $apiSecret;
 
     /**
      * BearerAuth constructor.
      * @param Client $client
      */
-    public function __construct(Client $client)
+    public function __construct(?string $apiKey, ?string $apiSecret)
     {
-        $this->client = $client;
+        $this->apiKey = $apiKey;
+        $this->apiSecret = $apiSecret;
     }
 
     /**
@@ -35,16 +34,9 @@ class BearerAuth implements Authenticable
     public function credentials(): array
     {
         return [
-            'Authorization' => 'Bearer '.$this->client->config()['api_key'],
+            'key' => $this->apiKey,
+            'secret' => $this->apiSecret,
         ];
-    }
-
-    /**
-     * @return Client
-     */
-    public function client(): Client
-    {
-        return $this->client;
     }
 
 }

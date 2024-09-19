@@ -2,6 +2,7 @@
 
 namespace Sankyu;
 
+use Sankyu\Contracts\Authenticable;
 use Psr\Http\Client\ClientInterface;
 
 class Client
@@ -19,7 +20,7 @@ class Client
     /**
      * @var string
      */
-    protected $endpoint = 'https://stinvoice.sankyutech.com.my';
+    protected $endpoint = 'https://stinvoice.sankyutech.com.my/api/v1';
 
     /**
      * @var bool
@@ -36,7 +37,15 @@ class Client
      */
     protected $supportedVersions = [
         'v1' => 'One',
+        'v2' => 'Two',
+        'v3' => 'Three',
     ];
+
+    /**
+     * Auth type
+     * @var Authenticable|null
+     */
+    protected ?Authenticable $auth;
 
     /**
      * Client constructor.
@@ -68,40 +77,30 @@ class Client
         return $this;
     }
 
-    /**
-     * @param string|null $version
-     * @return mixed
-     */
-    public function collections(?string $version = null)
+    public function provideAuth(Authenticable $auth)
     {
-        return $this->uses('Collection', $version);
+        $this->auth = $auth;
+        return $this;
+    }
+
+    public function auth(): Authenticable
+    {
+        return $this->auth;
     }
 
     /**
      * @param string|null $version
      * @return mixed
      */
-    public function bills(?string $version = null)
+    public function submissions(?string $version = null)
     {
-        return $this->uses('Bill', $version);
+        return $this->uses('Submission', $version);
     }
 
-    /**
-     * @param string|null $version
-     * @return mixed
-     */
-    public function transactions(?string $version = null)
+    public function useOtherEndpoint(?string $endpoint)
     {
-        return $this->uses('Transaction', $version);
-    }
-
-    /**
-     * @param string|null $version
-     * @return mixed
-     */
-    public function paymentchannel(?string $version = null)
-    {
-        return $this->uses('PaymentChannel', $version);
+        $this->endpoint = $endpoint;
+        return $this;
     }
 
     /**
@@ -117,7 +116,7 @@ class Client
      */
     public function sandbox(): string
     {
-        return 'https://preprod-stinvoice.sankyutech.com.my';
+        return 'https://preprod-stinvoice.sankyutech.com.my/api/v1';
     }
 
     /**
