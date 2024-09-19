@@ -29,7 +29,6 @@ composer require sankyutech/stinvoice-adapter
 require __DIR__ . '/vendor/autoload.php';
 
 use Sankyu\Client;
-use Sankyu\Request;
 use Sankyu\One\Submission;
 use Sankyu\CustomSankyuAuth;
 use GuzzleHttp\ClientInterface;
