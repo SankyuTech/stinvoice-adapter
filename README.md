@@ -15,10 +15,8 @@ ST Invoice Adapter is a package for St Invoice integration that been linked to M
 
 ## Installation
 
-Install sankyutech/stinvoice-adapter with composer
-
 ```bash
-  composer require sankyutech/stinvoice-adapter
+composer require sankyutech/stinvoice-adapter
 ```
     
 ## Usage/Examples

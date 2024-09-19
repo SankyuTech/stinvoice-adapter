@@ -1,6 +1,6 @@
 {
   "name": "sankyutech/stinvoice-adapter",
-  "description": "ST Invoice SDKfor PHP",
+  "description": "ST Invoice SDK for PHP",
   "type": "library",
   "license": "MIT",
   "authors": [
