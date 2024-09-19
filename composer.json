@@ -20,7 +20,7 @@
     }
   },
   "require": {
-    "php": "^8.0 || ^8.3",
+    "php": "^7.4 || ^8.0 || ^8.3",
     "php-http/multipart-stream-builder": "^1.0",
     "guzzlehttp/guzzle": "^6.5|^7.0.1",
     "php-http/guzzle7-adapter": "^0.1.1"
