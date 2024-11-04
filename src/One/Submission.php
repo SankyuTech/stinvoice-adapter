@@ -2,8 +2,10 @@
 
 namespace Sankyu\One;
 
+use Exception;
 use Sankyu\Client;
 use Sankyu\Request;
+use Sankyu\UnableToPingException;
 
 class Submission extends Request
 {
@@ -13,7 +15,7 @@ class Submission extends Request
      */
 
     public function invoice($param)
-    {   
+    {
         $endpoint = $this->client->endpoint();
         $response = $this->client->httpClient()
             ->request('POST', $endpoint.'/submit/invoice', [
@@ -353,12 +355,11 @@ class Submission extends Request
         return $this->responseWith($response);
     }
 
-    public function checkAccess(){
-
-
+    public function checkAccess()
+    {
         $endpoint = $this->client->endpoint();
-        $response = $this->client->httpClient()
-
+        try {
+            $response = $this->client->httpClient()
             ->request('POST', $endpoint.'/ping', [
                 'headers' => array_merge(
                     $this->client->auth()->credentials(),
@@ -368,12 +369,14 @@ class Submission extends Request
                     ]
                 )
             ]);
-
-        return $this->responseWith($response);
-
+            $this->responseWith($response);
+        } catch (Exception $e) {
+            throw new UnableToPingException($e->getMessage());
+        }
     }
 
-    public function checkIdentificationParty($param){
+    public function checkIdentificationParty($param)
+    {
 
         $endpoint = $this->client->endpoint();
         $response = $this->client->httpClient()
