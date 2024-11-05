@@ -2,6 +2,7 @@
 
 namespace Sankyu\One;
 
+use Exception;
 use Sankyu\Client;
 use Sankyu\Request;
 
