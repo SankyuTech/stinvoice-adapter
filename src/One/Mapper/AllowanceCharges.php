@@ -19,7 +19,7 @@ class AllowanceCharges
 
 	public function setDiscount($amount = 0 ,$reason = "Discount"){
 
-		$this->item['allowance_charges']['discount'] = $amount != 0 ?
+		$this->data['allowance_charges']['discount'] = $amount != 0 ?
 			[
 		        'reason' => $reason,
 		        'amount' => $amount
