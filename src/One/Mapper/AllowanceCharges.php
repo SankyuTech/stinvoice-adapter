@@ -8,7 +8,7 @@ class AllowanceCharges
 
 	public function setCharges($amount = 0,$reason = "Charge"){
 
-		$this->data['allowance_charges']['charges'] = $amount != 0 ?
+		$this->data['allowance_charges']['charges'][] = $amount != 0 ?
 
 			[
 		        'reason' => $reason,
@@ -19,7 +19,7 @@ class AllowanceCharges
 
 	public function setDiscount($amount = 0 ,$reason = "Discount"){
 
-		$this->data['allowance_charges']['discount'] = $amount != 0 ?
+		$this->data['allowance_charges']['discount'][] = $amount != 0 ?
 			[
 		        'reason' => $reason,
 		        'amount' => $amount

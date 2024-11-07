@@ -64,7 +64,7 @@ class DocumentLine
 
 	public function setItemCharges($amount = 0,$reason = "Charge",$rate = 0){
 
-		if($amount = 0){
+		if($amount == 0){
 
 			$this->item['charges'][] = [];
 
@@ -83,7 +83,7 @@ class DocumentLine
 
 	public function setItemDiscount($amount = 0 ,$reason = "Discount",$rate = 0){
 
-		if($amount = 0){
+		if($amount == 0){
 
 			$this->item['discount'][] = [];
 
