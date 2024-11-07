@@ -35,7 +35,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -67,7 +67,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -99,7 +99,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -131,7 +131,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -163,7 +163,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -195,7 +195,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -227,7 +227,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -259,7 +259,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -292,7 +292,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -324,7 +324,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -357,7 +357,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -389,7 +389,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -420,7 +420,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -453,7 +453,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -486,7 +486,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -518,7 +518,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -551,7 +551,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -583,7 +583,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -614,7 +614,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
@@ -648,7 +648,7 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            if(in_array($e->getCode(), [401,403,500])){
+            if(in_array($e->getCode(), [401,403,429,500])){
 
                 return $this->responseWith($e->getResponse());
             }
