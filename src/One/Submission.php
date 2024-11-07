@@ -52,7 +52,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/credit-note', [
+                ->request('POST', $endpoint.'/credit-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -60,7 +60,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -84,7 +84,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/debit-note', [
+                ->request('POST', $endpoint.'/debit-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -92,7 +92,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -116,7 +116,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/refund-note', [
+                ->request('POST', $endpoint.'/refund-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -124,7 +124,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -148,7 +148,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/self-billed-invoice', [
+                ->request('POST', $endpoint.'/self-billed-invoice', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -156,7 +156,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -180,7 +180,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/self-billed-credit-note', [
+                ->request('POST', $endpoint.'/self-billed-credit-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -188,7 +188,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -212,7 +212,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/self-billed-debit-note', [
+                ->request('POST', $endpoint.'/self-billed-debit-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -220,7 +220,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -244,7 +244,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/self-refund-note', [
+                ->request('POST', $endpoint.'/self-refund-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -252,7 +252,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -277,7 +277,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/get-submission', [
+                ->request('POST', $endpoint.'/get-submission', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -285,7 +285,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -309,7 +309,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/get-submission-document', [
+                ->request('POST', $endpoint.'/get-submission-document', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -317,7 +317,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -342,7 +342,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/get-submission-document-details', [
+                ->request('POST', $endpoint.'/get-submission-document-details', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -350,7 +350,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -374,7 +374,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/get-submission-document-details-qr', [
+                ->request('POST', $endpoint.'/get-submission-document-details-qr', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -382,12 +382,15 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
 
         } catch (Exception $e) {
+
+            var_dump($e->getMessage());
+            die();
 
             if(in_array($e->getCode(), [401,403,500])){
 
@@ -406,7 +409,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('GET', $endpoint.'/v1/get-recent-document', [
+                ->request('GET', $endpoint.'/get-recent-document', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -438,7 +441,7 @@ class Submission extends Request
 
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/reject-document', [
+                ->request('POST', $endpoint.'/reject-document', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -446,7 +449,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -471,7 +474,7 @@ class Submission extends Request
 
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/cancel-document', [
+                ->request('POST', $endpoint.'/cancel-document', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -479,7 +482,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -503,7 +506,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('GET', $endpoint.'/v1/get-documents-types', [
+                ->request('GET', $endpoint.'/get-documents-types', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -511,7 +514,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -536,7 +539,7 @@ class Submission extends Request
 
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/validate-tax-no', [
+                ->request('POST', $endpoint.'/validate-tax-no', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -544,7 +547,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
@@ -568,7 +571,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/v1/get-document-qr-url', [
+                ->request('POST', $endpoint.'/get-document-qr-url', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -576,7 +579,7 @@ class Submission extends Request
                             'Content-type' => 'application/x-www-form-urlencoded',
                         ]
                     ),
-                    'body' => $param
+                    'form_params' => $param
                 ]);
 
             return $this->responseWith($response);
