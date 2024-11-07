@@ -389,9 +389,6 @@ class Submission extends Request
 
         } catch (Exception $e) {
 
-            var_dump($e->getMessage());
-            die();
-
             if(in_array($e->getCode(), [401,403,500])){
 
                 return $this->responseWith($e->getResponse());
