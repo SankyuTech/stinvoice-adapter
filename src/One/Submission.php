@@ -52,7 +52,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/credit-note', [
+                ->request('POST', $endpoint.'/submit/credit-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -84,7 +84,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/debit-note', [
+                ->request('POST', $endpoint.'/submit/debit-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -116,7 +116,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/refund-note', [
+                ->request('POST', $endpoint.'/submit/refund-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -148,7 +148,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/self-billed-invoice', [
+                ->request('POST', $endpoint.'/submit/self-billed-invoice', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -180,7 +180,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/self-billed-credit-note', [
+                ->request('POST', $endpoint.'/submit/self-billed-credit-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -212,7 +212,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/self-billed-debit-note', [
+                ->request('POST', $endpoint.'/submit/self-billed-debit-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
@@ -244,7 +244,7 @@ class Submission extends Request
         try{
 
             $response = $this->client->httpClient()
-                ->request('POST', $endpoint.'/self-refund-note', [
+                ->request('POST', $endpoint.'/submit/self-refund-note', [
                     'headers' => array_merge(
                         $this->client->auth()->credentials(),
                         [
