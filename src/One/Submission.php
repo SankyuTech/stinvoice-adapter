@@ -659,4 +659,42 @@ class Submission extends Request
 
     }
 
+
+    public function searchTaxPayerTin($param)
+    {
+
+        $endpoint = $this->client->endpoint();
+
+        $endpoint = str_replace('/v1', '', $endpoint);
+
+        try{
+
+            $response = $this->client->httpClient()
+                ->request('POST', $endpoint.'/search-taxpayer-tin', [
+                    'headers' => array_merge(
+                        $this->client->auth()->credentials(),
+                        [
+                            'Accept' => 'application/json',
+                            'Content-type' => 'application/x-www-form-urlencoded',
+                        ]
+                    ),
+                    'form_params' => $param
+                ]);
+
+            return $this->responseWith($response);
+
+
+        } catch (Exception $e) {
+
+            if(in_array($e->getCode(), [401,403,429,500])){
+
+                return $this->responseWith($e->getResponse());
+            }
+
+            throw $e->getMessage();
+
+        }
+
+    }
+
 }
